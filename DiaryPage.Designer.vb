@@ -41,6 +41,7 @@ Partial Class DiaryPage
         Me.dtpSearch = New System.Windows.Forms.DateTimePicker()
         Me.btnPrevious = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
         lblTitleTop = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
@@ -218,7 +219,7 @@ Partial Class DiaryPage
         'dtpSearch
         '
         Me.dtpSearch.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.dtpSearch.CustomFormat = "dd/mm/yyyy"
+        Me.dtpSearch.CustomFormat = "dd/MM/yyyy"
         Me.dtpSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
         Me.dtpSearch.Location = New System.Drawing.Point(551, 129)
         Me.dtpSearch.Name = "dtpSearch"
@@ -252,12 +253,26 @@ Partial Class DiaryPage
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = False
         '
+        'btnCancel
+        '
+        Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(203, Byte), Integer), CType(CType(5, Byte), Integer))
+        Me.btnCancel.FlatAppearance.BorderSize = 0
+        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnCancel.Location = New System.Drawing.Point(685, 96)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(79, 30)
+        Me.btnCancel.TabIndex = 27
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = False
+        '
         'DiaryPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(140, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.btnPrevious)
         Me.Controls.Add(Me.dtpSearch)
@@ -302,4 +317,5 @@ Partial Class DiaryPage
     Friend WithEvents dtpSearch As DateTimePicker
     Friend WithEvents btnPrevious As Button
     Friend WithEvents btnBack As Button
+    Friend WithEvents btnCancel As Button
 End Class
